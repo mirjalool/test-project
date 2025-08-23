@@ -1,24 +1,8 @@
 import { Module } from '@nestjs/common';
-import { PrismaModule } from 'nestjs-prisma';
 import { UserModule } from './user/user.module';
+import { PrismaModule } from './prisma/prisma.module';
 
 @Module({
-  imports: [
-    PrismaModule.forRoot({
-      isGlobal: true,
-      prismaServiceOptions: {
-        prismaOptions: {
-          log: [
-            {
-              emit: 'event',
-              level: 'query',
-            },
-          ],
-        },
-      },
-    }),
-    UserModule,
-
-  ],
+  imports: [PrismaModule, UserModule],
 })
 export class AppModule {}
