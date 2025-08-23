@@ -1,15 +1,17 @@
 export * from './create-user.dto';
 export * from './update-user.dto';
 
-import { IsEmail, IsNotEmpty, MinLength } from 'class-validator';
+// import { ApiProperty } from '@nestjs/swagger';
+// import { IsEmail, IsNotEmpty, MinLength } from 'class-validator';
 
-export class CreateUserDto {
-  @IsNotEmpty()
-  name: string;
+// export class CreateUserDto {
+//   @IsNotEmpty()
+//   @ApiProperty({example: "Oleg"})
+//   name: string;
 
-  @IsEmail()
-  email: string;
+//   @IsEmail()
+//   email: string;
 
-  @MinLength(6)
-  password: string;
-}
+//   @MinLength(6)
+//   password: string;
+// }
