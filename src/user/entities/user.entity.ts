@@ -5,14 +5,14 @@ export class UserEntity implements User{
     constructor(data: Partial<UserEntity>) {
         Object.assign(this, data);
     }
-    @ApiProperty()
-    id: number;
-    
+@ApiProperty()
+id: number;
+  
     @ApiProperty({required: false})
     firstName: string | null;
     @ApiProperty({required: false})
     lastName: string | null;
-    
+
     @ApiProperty({required: false})
     email: string | null;
     @ApiProperty()
